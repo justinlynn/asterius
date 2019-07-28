@@ -50,7 +50,6 @@ runCmm Config {..} cmm_fns write_obj_cont = do
         { ghcMode = OneShot
         , ghcLink = NoLink
         , integerLibrary = IntegerSimple
-        , tablesNextToCode = False
         , hooks = h
         }
   env <- getSession

@@ -94,8 +94,8 @@ PlatformConstants {
     , pc_OFFSET_StgUpdateFrame_updatee = 0
     , pc_OFFSET_StgFunInfoExtraFwd_arity = 4
     , pc_REP_StgFunInfoExtraFwd_arity = 4
-    , pc_SIZEOF_StgFunInfoExtraRev = 24
-    , pc_OFFSET_StgFunInfoExtraRev_arity = 20
+    , pc_SIZEOF_StgFunInfoExtraRev = 32
+    , pc_OFFSET_StgFunInfoExtraRev_arity = 28
     , pc_REP_StgFunInfoExtraRev_arity = 4
     , pc_MAX_SPEC_SELECTEE_SIZE = 15
     , pc_MAX_SPEC_AP_SIZE = 7
@@ -110,10 +110,10 @@ PlatformConstants {
     , pc_MAX_Double_REG = 6
     , pc_MAX_Long_REG = 1
     , pc_MAX_XMM_REG = 6
-    , pc_MAX_Real_Vanilla_REG = 6
+    , pc_MAX_Real_Vanilla_REG = 10
     , pc_MAX_Real_Float_REG = 6
     , pc_MAX_Real_Double_REG = 6
-    , pc_MAX_Real_XMM_REG = 6
+    , pc_MAX_Real_XMM_REG = 0
     , pc_MAX_Real_Long_REG = 0
     , pc_RESERVED_C_STACK_BYTES = 16384
     , pc_RESERVED_STACK_WORDS = 21

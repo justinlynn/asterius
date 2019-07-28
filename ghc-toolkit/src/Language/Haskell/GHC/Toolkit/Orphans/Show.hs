@@ -52,9 +52,6 @@ fakeShow tag val =
       "(" ++
       tag ++ " " ++ show (showSDoc dflags $ pprCode AsmStyle $ ppr val) ++ ")"
 
-instance Outputable SDoc where
-  ppr = id
-
 instance Show SDoc where
   show = fakeShow "SDoc"
 
@@ -144,8 +141,8 @@ deriving instance Show AltCon
 
 deriving instance Show StgArg
 
-instance Show NoExtSilent where
-  show = fakeShow "NoExtSilent"
+instance Show NoExtFieldSilent where
+  show = fakeShow "NoExtFieldSilent"
 
 deriving instance
          (Show (BinderP pass), Show (XLet pass), Show (XLetNoEscape pass),

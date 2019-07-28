@@ -2,6 +2,7 @@
 {-# OPTIONS_GHC -Wno-deprecations -O0 #-}
 module GHC.PrimopWrappers where
 import qualified GHC.Prim
+import qualified GHC.Prim.Ext
 import GHC.Tuple ()
 import GHC.Prim (Char#, Int#, Word#, Float#, Double#, Int8#, Word8#, Int16#, Word16#, State#, MutableArray#, Array#, SmallMutableArray#, SmallArray#, MutableByteArray#, ByteArray#, Addr#, StablePtr#, MutableArrayArray#, ArrayArray#, MutVar#, RealWorld, TVar#, MVar#, ThreadId#, Weak#, StableName#, Compact#, BCO#)
 {-# NOINLINE gtChar# #-}
@@ -1628,7 +1629,7 @@ traceMarker# :: Addr# -> State# s -> State# s
 traceMarker# a1 a2 = (GHC.Prim.traceMarker#) a1 a2
 {-# NOINLINE getThreadAllocationCounter# #-}
 getThreadAllocationCounter# :: State# (RealWorld) -> (# State# (RealWorld),Int# #)
-getThreadAllocationCounter# a1 = (GHC.Prim.getThreadAllocationCounter#) a1
+getThreadAllocationCounter# a1 = (GHC.Prim.Ext.getThreadAllocationCounter#) a1
 {-# NOINLINE setThreadAllocationCounter# #-}
 setThreadAllocationCounter# :: Int# -> State# (RealWorld) -> State# (RealWorld)
 setThreadAllocationCounter# a1 a2 = (GHC.Prim.setThreadAllocationCounter#) a1 a2

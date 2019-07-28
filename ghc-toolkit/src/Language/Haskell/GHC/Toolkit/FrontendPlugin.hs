@@ -30,7 +30,6 @@ makeFrontendPlugin init_c =
                   setSessionDynFlags
                     dflags
                       { integerLibrary = IntegerSimple
-                      , tablesNextToCode = False
                       , hooks = h
                       }
                 env <- getSession
@@ -41,7 +40,6 @@ makeFrontendPlugin init_c =
                      setSessionDynFlags
                        dflags
                          { integerLibrary = IntegerSimple
-                         , tablesNextToCode = False
                          , hooks = h
                          }
                 env <- getSession
